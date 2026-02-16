@@ -24,3 +24,19 @@ if let realName = optionalName {
 // 2. 위험한 방법: Forced Unwrapping
 // 값이 확실히 있다고 보장될 떄만 써야 합니다.
 print(optionalName!)
+
+// 1. 우리가 평소에 쓰는 방식 (Sugar Syntax)
+let shortForm: Int? = 5
+
+// 2. 실제 내부 모습 (Full Syntax)
+// Optional은 사실 이렇게 생긴 열거형입니다.
+let longForm: Optional<Int> = Optional.some(5)
+
+// 3. Switch 구문으로 옵셔널 다루기
+// 옵셔널이 열거형이기 때문에 switch 문으로도 값을 확인할 수 있습니다.
+switch shortForm {
+case .some(let value):
+    print("값이 있네요: \(value)")
+case .none:
+    print("값이 없어요(nil)")
+}

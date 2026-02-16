@@ -1,61 +1,43 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+## [시스템 및 공통]
+.DS_Store
+*.swp
+*.lock
 
-## User settings
+## [Xcode]
+# 개인 설정 및 상태 정보 (필수 제외)
 xcuserdata/
+*.xcuserdata
+*.userdata
+*.xcuserstate
+DerivedData/
 
-## Obj-C/Swift specific
-*.hmap
-
-## App packaging
+# 빌드 결과물
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.hmap
 
-## Playgrounds
+# Playgrounds
 timeline.xctimeline
 playground.xcworkspace
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
+## [Swift Package Manager]
+# 라이브러리 소스 및 빌드 캐시
 .build/
+.swiftpm/
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
+# 주의: Package.resolved는 팀원 간 버전 동기화를 위해 
+# Git에 포함(Ignore 하지 않음)하는 것이 요즘 추세입니다.
+
+## [CocoaPods]
+# Pods 폴더를 제외하고 싶다면 아래 주석을 해제하세요.
 # Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+## [Carthage]
 Carthage/Build/
+Carthage/Checkouts/
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
+## [fastlane]
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
